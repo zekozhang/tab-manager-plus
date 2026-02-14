@@ -12,6 +12,8 @@ A Chrome extension that automatically groups your browser tabs — by domain, se
 - **Settings**: Click the gear icon in the sidebar header, or right‑click the extension icon → **Options**.
 - **Group all tabs now**: Use the refresh icon in the sidebar header, or press **Alt+G** (Windows/Linux) / **Option+G** (Mac).
 
+![Sidebar — Groups view](screenshot/group%20view.png)
+
 ---
 
 ## Features
@@ -26,6 +28,8 @@ A Chrome extension that automatically groups your browser tabs — by domain, se
 - Fallback for tabs that don’t match any rule: group by domain, by second-level domain, or leave ungrouped.
 - **Quick rule creation**: From the sidebar, add a tab to a group; a matching rule is created (by full URL, domain, or second-level domain — configurable in Settings).
 
+![Grouping rules settings](screenshot/setting-grouping-rule.png)
+
 ### Sidebar
 - View all tab groups and ungrouped tabs in the side panel.
 - **Header**: Switch between “Groups” view and **Workspaces**, trigger “Group all tabs”, and open Settings.
@@ -39,11 +43,17 @@ A Chrome extension that automatically groups your browser tabs — by domain, se
 - Switch workspaces from the chips in the sidebar header to filter tabs by context.
 - In **Settings → Workspaces**: sort workspaces by name (A–Z / Z–A) or drag cards to reorder.
 
+![Sidebar — Workspace view](screenshot/workspace%20view.png)
+
+![Workspace settings](screenshot/setting-workspace.png)
+
 ### Configuration
 - **Export/import** full configuration (rules, workspaces, settings) as JSON.
 - **Sort groups by name** (Settings → Grouping).
 - **Keyboard shortcut**: `Alt+G` / `Option+G` to group all tabs in the current window.
 - **UI**: English and Chinese.
+
+![Configuration & export/import](screenshot/setting-configuration.png)
 
 ---
 
@@ -89,6 +99,8 @@ MIT
 - **设置**：点击侧边栏顶部的齿轮图标，或右键扩展图标 → **选项**。
 - **立即分组**：点击侧边栏顶部的刷新图标，或按 **Alt+G**（Windows/Linux）/ **Option+G**（Mac）。
 
+![侧边栏 — 分组视图](screenshot/group%20view.png)
+
 ---
 
 ## 功能介绍
@@ -103,6 +115,8 @@ MIT
 - 未匹配规则的标签页可按域名、二级域名归组，或不分组。
 - **快速建规则**：在侧边栏中将标签页加入某分组即可生成匹配规则（按完整 URL、域名或二级域名，可在设置中配置）。
 
+![分组规则设置](screenshot/setting-grouping-rule.png)
+
 ### 侧边栏
 - 在侧边面板中查看所有分组和未分组标签页。
 - **顶部栏**：在「分组」视图与**工作区**之间切换、一键分组、打开设置。
@@ -116,11 +130,17 @@ MIT
 - 在侧边栏顶部的芯片中切换工作区，按场景筛选标签页。
 - 在**设置 → 工作区**中：可按名称排序（A–Z / Z–A），或拖拽卡片调整顺序。
 
+![侧边栏 — 工作区视图](screenshot/workspace%20view.png)
+
+![工作区设置](screenshot/setting-workspace.png)
+
 ### 配置管理
 - **导出/导入**完整配置（规则、工作区、设置），JSON 格式。
 - **按名称排序分组**（设置 → 分组）。
 - **快捷键**：`Alt+G` / `Option+G` 对当前窗口所有标签页立即分组。
 - **界面**：支持中文与英文。
+
+![配置与导出/导入](screenshot/setting-configuration.png)
 
 ---
 
