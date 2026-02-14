@@ -1,0 +1,25 @@
+/* Allow popup to expand height and show scrollbar (SidebarPage global styles only apply when body.sidebar-view) */
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 480px;
+    height: auto;
+    overflow: auto;
+}
+
+.ant-form-vertical .ant-form-item-label {
+    padding: 2px;
+}
+
+.ant-form-item {
+    margin-bottom: 16px;
+}
+
+.mainPanel {
+    width: 280px;
+    height: 480px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Tab Manager Plus",
+  "description": "Auto-group tabs by domain or custom rules. One-click manual grouping, workspaces to filter by context. Fewer tabs, better focus.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "tabs", "tabGroups", "windows", "sidePanel"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_icon": {
+      "16": "/images/TabManagerPlus.png",
+      "32": "/images/TabManagerPlus.png",
+      "48": "/images/TabManagerPlus.png",
+      "128": "/images/TabManagerPlus.png"
+    }
+  },
+  "options_page": "index.html#/options",
+  "icons": {
+    "16": "/images/TabManagerPlus.png",
+    "32": "/images/TabManagerPlus.png",
+    "48": "/images/TabManagerPlus.png",
+    "128": "/images/TabManagerPlus.png"
+  },
+  "commands": {
+    "group_right_now": {
+      "suggested_key": {
+        "default": "Alt+G"
+      },
+      "description": "Group all tabs right now"
+    }
+  }
+}
