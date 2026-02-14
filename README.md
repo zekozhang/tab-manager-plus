@@ -60,32 +60,6 @@ Load the unpacked extension: open `chrome://extensions`, turn on **Developer mod
 
 ---
 
-## Publishing to Chrome Web Store
-
-1. **Package the extension** (creates a zip with the contents of `build/` so `manifest.json` is at the root):
-
-   ```bash
-   npm run pack
-   ```
-
-   This runs `npm run build` and then creates **`tab-manager-plus.zip`** in the project root.
-
-   **Manual alternative** (if `npm run pack` fails on your system):
-   - Run `npm run build`.
-   - Zip the **contents** of the `build/` folder (not the folder itself). On macOS/Linux: `cd build && zip -r ../tab-manager-plus.zip .`
-   - On Windows: in File Explorer, select all files inside `build/`, right‑click → **Send to** → **Compressed (zipped) folder**, then name it `tab-manager-plus.zip`.
-
-2. **Upload to Chrome Web Store**
-   - Open [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole).
-   - Create a new item or select an existing one, then upload **tab-manager-plus.zip**.
-   - Fill in the listing (description, screenshots, etc.) and submit for review.
-
-3. **Before submitting**
-   - Bump **version** in `public/manifest.json` (and optionally in `package.json`) for each release.
-   - Ensure `public/manifest.json` has a non-empty **description** (required by the store).
-
----
-
 ## Development
 
 - Run the options/settings page in dev mode: `npm start` (opens the React dev server; use the extension’s Options page for the full flow).
