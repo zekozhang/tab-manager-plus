@@ -329,7 +329,7 @@ class OptionsPage extends React.Component {
         <header className="options-page__header">
           <div className="options-page__header-inner">
             <div className="options-page__brand">
-              <img src="/images/TabManagerPlus.png" alt="Tab Manager Plus" className="options-page__logo-img" />
+              <img src="/images/icon128.png" alt="Tab Manager Plus" className="options-page__logo-img" />
               <h1 className="options-page__title">Tab Manager Plus</h1>
               <span className="options-page__pill">{this.i18n("settings")}</span>
             </div>
