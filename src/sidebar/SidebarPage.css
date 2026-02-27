@@ -66,19 +66,27 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ===== Group Card ===== */
+/* ===== Group Card (depth without extra spacing) ===== */
 .sidebar-group-tree {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   background: #fff;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 3px 6px rgba(0, 0, 0, 0.1),
+    0 6px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: box-shadow 0.2s;
 }
 
 .sidebar-group-tree:hover {
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 2px 6px rgba(0, 0, 0, 0.1),
+    0 6px 14px rgba(0, 0, 0, 0.12),
+    0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 /* ===== Group Header ===== */
@@ -86,12 +94,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 8px;
+  padding: 3px 6px;
   cursor: pointer;
   user-select: none;
   background: rgba(102, 126, 234, 0.05);
   transition: background 0.15s;
-  min-height: 26px;
+  min-height: 22px;
 }
 
 .sidebar-group-header-compact:hover {
@@ -109,7 +117,7 @@
 .sidebar-group-header-left {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   flex: 1;
   min-width: 0;
 }
@@ -124,7 +132,7 @@
 .sidebar-group-title-with-count {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   flex: 1;
   min-width: 0;
 }
@@ -174,7 +182,7 @@
 .sidebar-group-tabs-compact {
   display: flex;
   flex-direction: column;
-  padding: 2px 4px 4px;
+  padding: 2px 4px 3px;
   border-top: 1px solid rgba(102, 126, 234, 0.06);
   gap: 0;
 }
@@ -185,7 +193,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3px 8px 3px 16px;
+  padding: 2px 6px 2px 14px;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.15s;
@@ -196,7 +204,7 @@
 }
 
 .sidebar-tab-item.nested {
-  padding-left: 16px;
+  padding-left: 12px;
 }
 
 .sidebar-tab-item:hover {
@@ -211,7 +219,7 @@
 .sidebar-tab-content {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex: 1;
   min-width: 0;
   padding-right: 8px;
@@ -437,39 +445,41 @@
 .sidebar-toolbar {
   display: flex;
   align-items: center;
-  padding: 3px 8px;
-  background: rgba(0, 0, 0, 0.06);
+  padding: 3px 6px;
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
-  min-height: 32px;
-  gap: 3px;
+  min-height: 30px;
+  gap: 4px;
 }
 
 .sidebar-toolbar-divider {
   width: 1px;
-  height: 16px;
-  background: rgba(255, 255, 255, 0.2);
+  height: 14px;
+  background: rgba(255, 255, 255, 0.18);
   flex-shrink: 0;
+  border-radius: 1px;
 }
 
 .sidebar-toolbar-workspaces {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   min-width: 0;
-  padding: 1px 0;
+  padding: 0;
 }
 
 .sidebar-toolbar-workspaces-scroll {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   overflow-x: auto;
   min-width: 0;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding: 0;
 }
 
 .sidebar-toolbar-workspaces-scroll::-webkit-scrollbar {
@@ -477,21 +487,24 @@
 }
 
 .sidebar-toolbar-more {
-  color: rgba(255, 255, 255, 0.7) !important;
-  font-size: 13px !important;
-  width: 26px !important;
-  height: 26px !important;
-  min-width: 26px !important;
-  min-height: 26px !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 12px !important;
+  width: 24px !important;
+  height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
   padding: 0 !important;
-  border: none !important;
-  border-radius: 6px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 5px !important;
   flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08) !important;
+  transition: all 0.2s ease !important;
 }
 
 .sidebar-toolbar-more:hover {
   color: #fff !important;
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
 }
 
 .sidebar-toolbar-workspaces-dropdown {
@@ -533,6 +546,7 @@
   align-items: center;
   gap: 2px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .sidebar-toolbar-btn {
@@ -567,33 +581,37 @@
   background: rgba(255, 255, 255, 0.2) !important;
 }
 
+/* Workspace chips: compact pill on purple header */
 .sidebar-toolbar-chip {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
   font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
   padding: 3px 8px !important;
   height: auto !important;
-  min-height: 22px !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  min-height: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
   border-radius: 5px !important;
-  background: transparent !important;
+  background: rgba(255, 255, 255, 0.1) !important;
   white-space: nowrap !important;
-  max-width: 100px !important;
+  max-width: 96px !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   flex-shrink: 0;
-  transition: all 0.15s;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  box-shadow: 0 0 0 transparent;
 }
 
 .sidebar-toolbar-chip:hover {
   color: #fff !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.35) !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.38) !important;
 }
 
 .sidebar-toolbar-chip.active {
-  background: rgba(255, 255, 255, 0.22) !important;
+  background: rgba(255, 255, 255, 0.26) !important;
   color: #fff !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.42) !important;
 }
 
 /* ===== Resize Handle ===== */

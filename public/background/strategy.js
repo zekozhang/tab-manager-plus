@@ -70,9 +70,13 @@ export const secDomainStrategy = {
 };
 
 // Strategy: group by configuration rules
+// Only group when status is 'complete' so we use the final URL and avoid grouping
+// on intermediate/redirect URLs. Do not require changeInfo.url in the same event:
+// Chrome often fires url+loading first, then status=complete without url.
 export const configStrategy = {
   shloudGroup: (changeInfo, tab) => {
-    return changeInfo.url && tab.url.match(/^https?:\/\/[^/]+\/.*/);
+    if (!tab.url || !tab.url.match(/^https?:\/\/[^/]+/)) return false;
+    return changeInfo.status === "complete";
   },
   getGroupKey: (tab, userConfig) => {
     const result = getGroupKeyByConfig(tab.url, userConfig.configuration);

@@ -1,5 +1,6 @@
 export function getDomain(url) {
-  const re = /^(?:[a-zA-Z-]+):\/\/([^/:]+)(:\d+)?\/.*/;
+  if (!url || !url.startsWith("http")) return null;
+  const re = /^(?:[a-zA-Z-]+):\/\/([^/:]+)(:\d+)?(\/|$)/;
   const match = url.match(re);
   return match ? match[1] : null;
 }

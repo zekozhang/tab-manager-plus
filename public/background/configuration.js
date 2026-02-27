@@ -7,13 +7,11 @@ export const defaultConfiguration = {
 };
 
 export function getGroupKeyByConfig(url, configuration) {
-  for (let rule of configuration.rules) {
-    for (let obj of rule.patterns) {
-      if (obj.pattern) {
-        // Use full URL for matching to support rules that include path
-        if (isExpressionMatched(url, obj.pattern)) {
-          return rule.name;
-        }
+  for (let rule of configuration.rules || []) {
+    for (let obj of rule.patterns || []) {
+      const pattern = typeof obj === "string" ? obj : obj?.pattern;
+      if (pattern && isExpressionMatched(url, pattern)) {
+        return rule.name;
       }
     }
   }
