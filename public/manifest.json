@@ -1,7 +1,7 @@
 {
   "name": "Tab Manager Plus",
   "description": "Auto-group tabs by domain or custom rules. One-click manual grouping, workspaces to filter by context. Fewer tabs, better focus.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 3,
   "background": {
     "service_worker": "background/background.js",
